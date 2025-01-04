@@ -33,7 +33,7 @@ export async function createOrder(product) {
         order_lines: [
             { 
                 type:"physical",
-                reference: product.id, 
+                reference: product.id, //typo before 
                 name: product.title,
                 quantity,
                 quantity_unit: "pcs",
