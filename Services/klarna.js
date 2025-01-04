@@ -33,7 +33,7 @@ export async function createOrder(product) {
         order_lines: [
             { 
                 type:"physical",
-                referance: product.id, 
+                reference: product.id, 
                 name: product.title,
                 quantity,
                 quantity_unit: "pcs",
@@ -49,10 +49,10 @@ export async function createOrder(product) {
 
         ],
         merchant_urls: { 
-            terms: "https://www.example.com/terms.html",
-            checkout: "https://www.example.com/checkout.html",
+            terms: "https://klarnacheckoutkanon.vercel.app/terms",
+            checkout: "https://klarnacheckoutkanon.vercel.app/checkout",
             confirmation: `${process.env.CONFIRMATION_URL}?order_id={checkout.order.id}`,
-            push: "https://www.example.com/api/push", 
+            push: "https://klarnacheckoutkanon.vercel.app/api/push"
         }
         
     };
